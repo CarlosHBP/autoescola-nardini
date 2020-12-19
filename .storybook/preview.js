@@ -1,6 +1,6 @@
 import React from "react";
 
-import GlobalStyle from "../src/components/GlobalStyle";
+import GlobalStyle from "styles/GlobalStyle";
 
 export const decorators = [
     (StoryFn) => (
