@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { breakAt, BreakpointSize } from "./Breakpoints";
+import { breakAt, BreakpointSizes } from "styles/Breakpoints";
 
 const colorYellow = "#ffc107";
 
@@ -16,29 +16,6 @@ const Root = styled.div`
         background-position: center;
         background-blend-mode: overlay;
     `}
-`;
-
-const Title = styled.h1`
-    position: relative;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        background-color: ${colorYellow};
-        height: 5px;
-        width: 70px;
-    }
-
-    strong {
-        color: ${colorYellow};
-    }
 `;
 
 const Content = styled.div`
@@ -64,21 +41,20 @@ const Content = styled.div`
 const Container = styled.div`
     width: 100%;
     padding: 0 8px;
-    ${breakAt(BreakpointSize.sm)} {
+    ${breakAt(BreakpointSizes.sm)} {
         padding: 0 16px;
     }
 
-    ${breakAt(BreakpointSize.lg)} {
+    ${breakAt(BreakpointSizes.lg)} {
         width: 1140px;
         padding: 0;
         margin: 0 auto;
     }
 `;
 
-const Hero = ({ image, title, children }) => (
-    <Root image={image}>
+const Hero = ({ image, children }) => (
+    <Root image={image} data-testid="hero">
         <Container>
-            <Title>{title}</Title>
             <Content>{children}</Content>
         </Container>
     </Root>
@@ -89,7 +65,7 @@ Hero.propTypes = {
      Background image
      */
     image: PropTypes.string,
-    title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+    //title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     children: PropTypes.node,
 };
 
