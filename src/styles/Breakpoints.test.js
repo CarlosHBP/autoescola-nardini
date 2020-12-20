@@ -1,6 +1,3 @@
-import React from "react";
-import { render } from "@testing-library/react";
-
 import { breakAt, BreakpointSizes } from "./Breakpoints";
 
 test.each([
