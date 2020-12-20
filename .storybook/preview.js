@@ -1,12 +1,15 @@
 import React from "react";
 
 import GlobalStyle from "styles/GlobalStyle";
+import ThemeProvider from "../src/styles/ThemeProvider";
 
 export const decorators = [
     (StoryFn) => (
         <>
             <GlobalStyle />
-            <StoryFn />
+            <ThemeProvider>
+                <StoryFn />
+            </ThemeProvider>
         </>
     ),
 ];
