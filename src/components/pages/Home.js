@@ -10,6 +10,7 @@ import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import ProductGrid from "components/organisms/ProductGrid";
 import Footer from "components/organisms/Footer";
+import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 
 import HeroImage from "assets/hero.jpg";
 import AboutVideo from "assets/about.mp4";
@@ -131,6 +132,26 @@ const Home = () => (
             <Heading>
                 <h2>Dúvidas Recorrentes</h2>
             </Heading>
+            <AccordionGroup>
+                <Accordion title="Como eu renovo minha CNH?">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odio nostrum, tenetur illum sapiente porro qui alias aliquid
+                    nisi deleniti repudiandae ab similique consectetur eveniet,
+                    saepe aut debitis. Veritatis, magnam deleniti!
+                </Accordion>
+                <Accordion title="Como faço a mudança de categoria?">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odio nostrum, tenetur illum sapiente porro qui alias aliquid
+                    nisi deleniti repudiandae ab similique consectetur eveniet,
+                    saepe aut debitis. Veritatis, magnam deleniti!
+                </Accordion>
+                <Accordion title="Fui multado, e agora?">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Odio nostrum, tenetur illum sapiente porro qui alias aliquid
+                    nisi deleniti repudiandae ab similique consectetur eveniet,
+                    saepe aut debitis. Veritatis, magnam deleniti!
+                </Accordion>
+            </AccordionGroup>
         </Section>
         <Footer />
     </>
