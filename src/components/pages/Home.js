@@ -8,10 +8,49 @@ import Button from "components/atoms/Button";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
+import ProductGrid from "components/organisms/ProductGrid";
 import Footer from "components/organisms/Footer";
 
 import HeroImage from "assets/hero.jpg";
 import AboutVideo from "assets/about.mp4";
+import ServImage01 from "assets/serv-01.jpg";
+import ServImage02 from "assets/serv-02.jpg";
+import ServImage03 from "assets/serv-03.jpg";
+import ServImage04 from "assets/serv-04.jpg";
+import ServImage05 from "assets/serv-05.jpg";
+
+const products = [
+    {
+        id: 1,
+        image: ServImage01,
+        title: "1ª Habilitação Carro e Moto",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+        id: 2,
+        image: ServImage02,
+        title: "1ª Habilitação Carro",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+        id: 3,
+        image: ServImage03,
+        title: "1ª Habilitação Moto",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+        id: 4,
+        image: ServImage04,
+        title: "Mudança de Categoria Caminhão",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+        id: 5,
+        image: ServImage05,
+        title: "Aulas Avulsas",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+];
 
 const Home = () => (
     <>
@@ -66,6 +105,7 @@ const Home = () => (
             <Heading>
                 <h2>Conheça nossos serviços</h2>
             </Heading>
+            <ProductGrid products={products} />
         </Section>
         <Section>
             <Grid md={2}>
