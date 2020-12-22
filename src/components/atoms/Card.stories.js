@@ -34,8 +34,8 @@ export const usage = () => (
 
 export const withMedia = () => (
     <Section inverse>
-        <CardMedia image={PlaceholderImage}></CardMedia>
         <Card>
+            <CardMedia image={PlaceholderImage}></CardMedia>
             <CardBody>
                 <Heading>
                     <h6>Título</h6>
