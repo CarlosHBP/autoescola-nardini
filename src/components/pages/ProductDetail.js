@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
@@ -120,8 +120,8 @@ const ProductDetail = () => {
     );
 };
 
-ProductDetail.defaultProps = {};
+//ProductDetail.defaultProps = {};
 
-ProductDetail.propTypes = {};
+//ProductDetail.propTypes = {};
 
 export default ProductDetail;
