@@ -1,19 +1,20 @@
 import React from "react";
 import { select } from "@storybook/addon-knobs";
+import { MemoryRouter as Router } from "react-router-dom";
 
 import GlobalStyle from "styles/GlobalStyle";
 import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider";
 
 export const decorators = [
     (StoryFn) => (
-        <>
+        <Router>
             <ThemeProvider
                 theme={select("Theme", ThemeNames, ThemeNames.light)}
             >
                 <GlobalStyle />
                 <StoryFn />
             </ThemeProvider>
-        </>
+        </Router>
     ),
 ];
 
