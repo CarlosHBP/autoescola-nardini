@@ -2,8 +2,6 @@ import React from "react";
 //import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { useScrollToTop } from "hooks/scroll";
-
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
 import Section from "components/molecules/Section";
@@ -40,8 +38,6 @@ const instructors = [
 ];
 
 const About = () => {
-    useScrollToTop();
-
     return (
         <>
             <Hero image={HeroImage}>

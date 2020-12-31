@@ -1,6 +1,7 @@
 import React from "react";
 
 import Home from "./Home";
+import { buildProductList } from "models/builders/products";
 
 const story = {
     title: "Components/Pages/Home",
@@ -9,4 +10,6 @@ const story = {
 
 export default story;
 
-export const usage = () => <Home></Home>;
+const products = buildProductList(8);
+
+export const usage = () => <Home products={products} />;
